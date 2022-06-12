@@ -1,15 +1,17 @@
+import math
+
+
 class Player:
 
-    def __init__(self, name, gender, level, balance, wood, stone, exp):
+    def __init__(self, name, gender):
         self.name = name
         self.gender = gender
-        self.level = level
-        self.balance = balance
-        self.wood = wood
-        self.stone = stone
-        self.exp = exp
+        self.level = 0
+        self.balance = 0
+        self.exp = 0
+        self.materials = {"wood": 0, "stone": 0}
 
     def __repr__(self):
         player_string = self.name + "\n" + self.gender + "\n" + "$" + str(self.balance) + "\n" + "Level " + str(
-            self.level)
+            math.floor(self.level))
         return player_string
